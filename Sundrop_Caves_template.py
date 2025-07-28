@@ -1,8 +1,47 @@
 from random import randint
 
 player = {}
-game_map = []
+game_map =[[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+            [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+            [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+            [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+            [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+]
 fog = []
+
+num_rows = len(game_map)
+num_columns = len(game_map[0])
+# Print the top line
+print ("+", end = "")
+for column in range (num_columns) :
+    print("-", end = "")
+print ("+")
+
+for row in range (num_rows):
+    print("|", end="")
+    for column in game_map[row]:
+        print(" {}".format(column), end ='')
+    print ("|")
+# Print the Bottom line
+print ("+", end = "")
+for column in range (num_columns) :
+    print("-", end ='')
+print ("+")
+
+for row in range (num_rows):
+    print("|", end="")
+    for column in game_map[row]:
+        print(" {}".format(column), end ='')
+    print ("|")
+    
+# Print the Bottom line
+print ("+", end = "")
+for column in range (num_columns) :
+    print("-", end ='')
+print ("+")
+
+
+
 
 MAP_WIDTH = 0
 MAP_HEIGHT = 0
